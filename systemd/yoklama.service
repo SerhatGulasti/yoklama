@@ -1,0 +1,22 @@
+[Unit]
+Description=Yoklama package usage recorder
+
+[Service]
+Type=simple
+ExecStart=/usr/local/lib/yoklama/bin/yoklama run
+ExecReload=/usr/bin/kill -HUP $MAINPID
+StateDirectory=yoklama
+StateDirectoryMode=0755
+Nice=10
+IOSchedulingClass=idle
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=yes
+
+# Do not add ProtectSystem, ProtectHome, PrivateTmp, ReadOnlyPaths or anything
+# else that gives the service its own mount namespace. The fanotify mark goes
+# on the root mount as this process sees it, so inside a private namespace it
+# would stop seeing file opens from the rest of the system.
+
+[Install]
+WantedBy=multi-user.target

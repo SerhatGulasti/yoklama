@@ -1,0 +1,11 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = *
+
+[Action]
+Description = Reloading the Yoklama package catalog...
+When = PostTransaction
+Exec = /usr/bin/systemctl reload yoklama

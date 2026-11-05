@@ -1,0 +1,13 @@
+# Packages the report keeps in a separate "do not touch" section.
+# One glob per line.
+base
+base-devel
+linux*
+linux-firmware*
+cachyos-*
+systemd*
+mkinitcpio
+btrfs-progs
+sudo
+networkmanager
+limine*

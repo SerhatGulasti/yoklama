@@ -1,0 +1,34 @@
+# Processes whose file opens never count as package use.
+# One name per line. Matched on the first 15 characters, because the kernel
+# truncates process names there (update-desktop-database -> update-desktop-).
+
+# Package managers
+pacman
+paru
+yay
+
+# Hooks and cache builders
+ldconfig
+fc-cache
+mandb
+gtk-update-icon-cache
+update-desktop-database
+glib-compile-schemas
+update-mime-database
+
+# Initramfs and modules
+mkinitcpio
+dracut
+depmod
+
+# Pacman helpers and snapshot tools
+pacman-conf
+pacconf
+pactree
+checkrebuild
+snapper
+snapperd
+limine-snapper-sync
+
+# Yoklama itself (the report command, for example)
+yoklama

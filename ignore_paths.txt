@@ -1,0 +1,13 @@
+# Directories that menus, launchers and service managers scan wholesale.
+# Opening a file under one of these never counts as package use.
+/usr/share/applications
+/usr/share/icons
+/usr/share/pixmaps
+/usr/share/metainfo
+/usr/share/dbus-1
+/usr/lib/systemd
+/usr/share/polkit-1
+/usr/share/fontconfig
+/usr/lib/modprobe.d
+/usr/lib/pkgconfig
+/usr/share/pkgconfig
